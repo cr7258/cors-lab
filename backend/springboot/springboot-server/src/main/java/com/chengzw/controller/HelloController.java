@@ -18,8 +18,8 @@ public class HelloController {
     @Autowired
     HelloService helloService;
 
-    // 后端解决跨域问题方式二，使用该注解就不需要 CrosConfig，@CrossOrigin(origins = "*",allowCredentials="true",allowedHeaders = "*",methods = {})
-    //@CrossOrigin
+    // 后端解决跨域问题方式三，使用该注解就注释 CrosConfig 和 WebMvcConfig，@CrossOrigin(origins = "*",allowCredentials="true",allowedHeaders = "*",methods = {})
+    @CrossOrigin
     @RequestMapping("/api/data")
     public String hello(){
         return helloService.hello();
