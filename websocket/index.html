@@ -1,0 +1,9 @@
+<script>
+  const socket = new WebSocket("ws://localhost:3011");
+  socket.onopen = function() {
+    socket.send("Hello Server");
+  };
+  socket.onmessage = function(e) {
+    console.log(e.data);
+  };
+</script>
